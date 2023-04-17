@@ -11,29 +11,23 @@ INCLUDELIB OLDNAMES
 
 PUBLIC	_f
 PUBLIC	_main
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtpy
+;	COMDAT _main
 _TEXT	SEGMENT
-_main	PROC
+_main	PROC						; COMDAT
 ; File c:\Users\vboxuser\Desktop\reversing_study\empty_func\f.c
-; Line 5
-	push	ebp
-	mov	ebp, esp
 ; Line 6
 	xor	eax, eax
 ; Line 7
-	pop	ebp
 	ret	0
 _main	ENDP
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtpy
+;	COMDAT _f
 _TEXT	SEGMENT
-_f	PROC
+_f	PROC						; COMDAT
 ; File c:\Users\vboxuser\Desktop\reversing_study\empty_func\f.c
-; Line 1
-	push	ebp
-	mov	ebp, esp
 ; Line 3
-	pop	ebp
 	ret	0
 _f	ENDP
 _TEXT	ENDS
